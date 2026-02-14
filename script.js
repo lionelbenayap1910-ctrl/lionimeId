@@ -327,7 +327,7 @@ async function loadGenreAnime(slug, page = 1) {
     document.getElementById('main-content').innerHTML = html;
 }
 
-// ==================== SCHEDULE ====================
+// ==================== SCHEDULE - FIXED VERSION ====================
 async function loadSchedule() {
     showLoading();
     const data = await fetchAPI('/schedule');
