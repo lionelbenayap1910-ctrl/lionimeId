@@ -1,7 +1,7 @@
 {
-  "name": "Lionime - Nonton Anime Sub Indo",
-  "short_name": "Lionime",
-  "description": "Nonton anime subtitle Indonesia dengan mudah dan cepat",
+  "name": "Lion!me - Nonton Anime Sub Indo",
+  "short_name": "Lion!me",
+  "description": "Nonton anime subtitle Indonesia dengan mudah dan cepat - Streaming anime ongoing dan completed",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f0f13",
@@ -64,14 +64,14 @@
       "sizes": "1280x720",
       "type": "image/jpeg",
       "form_factor": "wide",
-      "label": "Halaman Utama AnimeKu"
+      "label": "Halaman Utama Lion!me"
     },
     {
       "src": "screenshots/mobile.jpg",
       "sizes": "720x1280",
       "type": "image/jpeg",
       "form_factor": "narrow",
-      "label": "Tampilan Mobile AnimeKu"
+      "label": "Tampilan Mobile Lion!me"
     }
   ],
   "shortcuts": [
@@ -81,6 +81,13 @@
       "description": "Lihat anime yang sedang tayang",
       "url": "/#ongoing",
       "icons": [{ "src": "icons/shortcut-ongoing.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Anime Tamat",
+      "short_name": "Completed",
+      "description": "Lihat anime yang sudah tamat",
+      "url": "/#completed",
+      "icons": [{ "src": "icons/shortcut-completed.png", "sizes": "96x96" }]
     },
     {
       "name": "Jadwal Rilis",
