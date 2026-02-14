@@ -1,6 +1,6 @@
-const CACHE_NAME = 'lionme-v1';
-const API_CACHE_NAME = 'lionme-api-v1';
-const STATIC_CACHE_NAME = 'lionme-static-v1';
+const CACHE_NAME = 'animeku-v1';
+const API_CACHE_NAME = 'animeku-api-v1';
+const STATIC_CACHE_NAME = 'animeku-static-v1';
 
 // File yang akan di-cache saat install
 const staticAssets = [
