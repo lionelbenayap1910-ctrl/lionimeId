@@ -1,0 +1,96 @@
+{
+  "name": "Lionime - Nonton Anime Sub Indo",
+  "short_name": "Lionime",
+  "description": "Nonton anime subtitle Indonesia dengan mudah dan cepat",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f13",
+  "theme_color": "#ff6b1a",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/home.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Halaman Utama AnimeKu"
+    },
+    {
+      "src": "screenshots/mobile.jpg",
+      "sizes": "720x1280",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Tampilan Mobile AnimeKu"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Sedang Tayang",
+      "short_name": "Ongoing",
+      "description": "Lihat anime yang sedang tayang",
+      "url": "/#ongoing",
+      "icons": [{ "src": "icons/shortcut-ongoing.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Jadwal Rilis",
+      "short_name": "Jadwal",
+      "description": "Lihat jadwal rilis anime",
+      "url": "/#schedule",
+      "icons": [{ "src": "icons/shortcut-schedule.png", "sizes": "96x96" }]
+    }
+  ],
+  "categories": ["entertainment", "anime"],
+  "lang": "id",
+  "dir": "ltr"
+}
