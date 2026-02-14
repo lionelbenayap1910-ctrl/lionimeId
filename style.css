@@ -26,24 +26,15 @@ header {
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
     color: #ff6b1a;
     cursor: pointer;
     z-index: 1001;
-    text-shadow: 0 0 10px rgba(255, 107, 26, 0.3);
-    letter-spacing: 1px;
 }
 
 .logo span {
     color: #ffffff;
-    font-weight: 300;
-    text-shadow: none;
-}
-
-.logo:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
 }
 
 .search-bar {
@@ -94,28 +85,11 @@ header {
     transition: color 0.3s;
     font-size: 15px;
     cursor: pointer;
-    position: relative;
 }
 
 .desktop-nav ul li a:hover, 
 .desktop-nav ul li a.active {
     color: #ff6b1a;
-}
-
-.desktop-nav ul li a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ff6b1a;
-    animation: slideIn 0.3s ease;
-}
-
-@keyframes slideIn {
-    from { width: 0; }
-    to { width: 100%; }
 }
 
 /* Mobile Navigation */
@@ -233,11 +207,6 @@ main {
     text-decoration: none;
     font-size: 14px;
     cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.section-title a:hover {
-    transform: translateX(5px);
 }
 
 /* Banner */
@@ -316,13 +285,10 @@ main {
     overflow: hidden;
     transition: transform 0.3s;
     cursor: pointer;
-    border: 1px solid transparent;
 }
 
 .anime-card:hover {
     transform: translateY(-8px);
-    border-color: #ff6b1a;
-    box-shadow: 0 5px 15px rgba(255, 107, 26, 0.2);
 }
 
 .anime-card img {
@@ -378,7 +344,6 @@ main {
 
 .genre-tag:hover {
     background-color: #ff6b1a;
-    transform: translateY(-2px);
 }
 
 /* Back Button */
@@ -398,7 +363,6 @@ main {
 
 .back-button:hover {
     background-color: #ff6b1a;
-    transform: translateX(-5px);
 }
 
 /* Loading */
@@ -406,16 +370,6 @@ main {
     text-align: center;
     padding: 50px;
     color: #ff6b1a;
-}
-
-.loading i {
-    animation: pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
 }
 
 /* Error */
@@ -451,7 +405,6 @@ main {
 
 .retry-btn:hover {
     background-color: #ff8c4a;
-    transform: scale(1.05);
 }
 
 /* Schedule Page */
@@ -487,7 +440,6 @@ main {
 .schedule-tab:hover,
 .schedule-tab.active {
     background-color: #ff6b1a;
-    transform: translateY(-2px);
 }
 
 .schedule-day-content {
@@ -565,7 +517,6 @@ main {
     width: 250px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(255, 107, 26, 0.2);
 }
 
 .detail-poster img {
@@ -580,7 +531,6 @@ main {
 .detail-info h1 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #ff6b1a;
 }
 
 .info-table {
@@ -618,7 +568,6 @@ main {
 
 .genre-badge:hover {
     background-color: #ff6b1a;
-    transform: translateY(-2px);
 }
 
 .synopsis {
@@ -651,7 +600,6 @@ main {
 
 .episode-item:hover {
     background-color: #2a2a35;
-    transform: translateX(5px);
 }
 
 .episode-title {
@@ -709,7 +657,6 @@ main {
 
 .nav-episode-btn:hover:not(:disabled) {
     background-color: #ff6b1a;
-    transform: translateY(-2px);
 }
 
 .nav-episode-btn:disabled {
@@ -738,7 +685,6 @@ main {
 
 .page-btn:hover:not(:disabled) {
     background-color: #ff6b1a;
-    transform: translateY(-2px);
 }
 
 .page-btn:disabled {
@@ -783,7 +729,6 @@ main {
 .alphabet-item:hover,
 .alphabet-item.active {
     background-color: #ff6b1a;
-    transform: translateY(-2px);
 }
 
 /* Footer */
