@@ -3,82 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lionime - Nonton Anime Sub Indo</title>
+    <title>Lion!me - Dashboard</title>
     
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#ff6b1a">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="AnimeKu">
+    <meta name="apple-mobile-web-app-title" content="Lion!me">
+    <meta name="description" content="Portal entertainment - Anime, Comic, Novel">
     
-    <!-- PWA Icons -->
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <!-- Manifest -->
     <link rel="manifest" href="manifest.json">
     
-    <!-- Font Awesome Icons -->
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- CSS File -->
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    <header>
-        <div class="logo" onclick="navigateTo('home')">Lion<span>!me</span></div>
-        
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari anime..." onkeypress="handleSearchKey(event)">
-            <button onclick="performSearch()"><i class="fas fa-search"></i></button>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='/'">Lion<span>!me</span></div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="/" class="active">Dashboard</a>
+                <a href="/anime/">Anime</a>
+                <a href="/comic/">Comic</a>
+                <a href="/novel/">Novel</a>
+            </div>
+            
+            <div class="nav-right">
+                <div class="burger-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
-
-        <!-- Desktop Navigation -->
-        <nav class="desktop-nav">
-            <ul>
-                <li><a onclick="navigateTo('home')" class="nav-link" id="nav-home">Home</a></li>
-                <li><a onclick="navigateTo('ongoing')" class="nav-link" id="nav-ongoing">Ongoing</a></li>
-                <li><a onclick="navigateTo('completed')" class="nav-link" id="nav-completed">Completed</a></li>
-                <li><a onclick="navigateTo('genre')" class="nav-link" id="nav-genre">Genre</a></li>
-                <li><a onclick="navigateTo('schedule')" class="nav-link" id="nav-schedule">Jadwal</a></li>
-                <li><a onclick="navigateTo('all')" class="nav-link" id="nav-all">All Anime</a></li>
-            </ul>
-        </nav>
-
-        <!-- Burger Menu for Mobile -->
-        <div class="burger-menu" onclick="toggleMobileMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav">
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
-                <li><a onclick="navigateTo('home'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-home">Home</a></li>
-                <li><a onclick="navigateTo('ongoing'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-ongoing">Ongoing</a></li>
-                <li><a onclick="navigateTo('completed'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-completed">Completed</a></li>
-                <li><a onclick="navigateTo('genre'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-genre">Genre</a></li>
-                <li><a onclick="navigateTo('schedule'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-schedule">Jadwal</a></li>
-                <li><a onclick="navigateTo('all'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-all">All Anime</a></li>
-            </ul>
-        </div>
-        <div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
     </nav>
 
-    <main id="main-content">
-        <!-- Konten akan diisi oleh JavaScript -->
-        <div class="loading">
-            <i class="fas fa-spinner fa-spin fa-3x"></i>
-            <p style="margin-top: 20px;">Memuat data...</p>
+    <!-- Mobile Menu (BERISI SOSIAL MEDIA) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <i class="fas fa-times" onclick="toggleMenu()"></i>
         </div>
+        
+        <nav class="mobile-nav">
+            <a href="/" class="active">
+                <i class="fas fa-home"></i> Dashboard
+            </a>
+            <a href="/anime/">
+                <i class="fas fa-tv"></i> Anime
+            </a>
+            <a href="/comic/">
+                <i class="fas fa-book"></i> Comic
+            </a>
+            <a href="/novel/">
+                <i class="fas fa-book-open"></i> Novel
+            </a>
+        </nav>
+        
+        <!-- SOSIAL MEDIA DI MOBILE MENU -->
+        <div class="mobile-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Selamat Datang di <span class="highlight">Lion!me</span></h1>
+                <p>Tempatnya para pecinta anime, comic, dan novel</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="window.location.href='/anime/'">Mulai Nonton Anime</button>
+                    <button class="btn-secondary" onclick="window.location.href='/#explore'">Jelajahi</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stat-card">
+                <i class="fas fa-tv"></i>
+                <div class="stat-info">
+                    <h3 class="counter" data-target="1234">0</h3>
+                    <p>Judul Anime</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-book"></i>
+                <div class="stat-info">
+                    <h3 class="counter" data-target="567">0</h3>
+                    <p>Komik</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-book-open"></i>
+                <div class="stat-info">
+                    <h3 class="counter" data-target="345">0</h3>
+                    <p>Novel</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <div class="stat-info">
+                    <h3 class="counter" data-target="10000">0</h3>
+                    <p>Pengguna Aktif</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories" id="explore">
+            <h2 class="section-title">Jelajahi Kategori</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="window.location.href='/anime/'">
+                    <div class="card-icon">📺</div>
+                    <h3>Anime</h3>
+                    <p>Streaming anime subtitle Indonesia dengan kualitas terbaik. Tersedia anime ongoing dan completed.</p>
+                    <div class="card-footer">
+                        <span class="card-link">Lihat Anime →</span>
+                        <span class="card-badge">1000+</span>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="window.location.href='/comic/'">
+                    <div class="card-icon">📚</div>
+                    <h3>Comic</h3>
+                    <p>Baca komik favoritmu dari berbagai genre. Update setiap hari!</p>
+                    <div class="card-footer">
+                        <span class="card-link">Lihat Comic →</span>
+                        <span class="card-badge">500+</span>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="window.location.href='/novel/'">
+                    <div class="card-icon">📖</div>
+                    <h3>Novel</h3>
+                    <p>Novel ringan dan web novel terpopuler. Temukan cerita seru di sini.</p>
+                    <div class="card-footer">
+                        <span class="card-link">Lihat Novel →</span>
+                        <span class="card-badge">300+</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2 class="section-title">Kenapa Pilih Lion!me?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Cepat</h4>
+                    <p>Loading cepat dan streaming lancar</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Aman</h4>
+                    <p>Bebas iklan mengganggu</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-sync-alt"></i>
+                    <h4>Update</h4>
+                    <p>Update setiap hari</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Responsive</h4>
+                    <p>Bisa diakses di semua device</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Siap untuk mulai?</h2>
+                <p>Bergabunglah dengan ribuan pengguna lainnya</p>
+                <button class="btn-primary" onclick="window.location.href='/anime/'">Mulai Nonton Sekarang</button>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>Lionime - Nonton Anime Sub Indo.</p>
-        <p style="margin-top: 10px; font-size: 13px;">Masih Beta</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Lion!me</h3>
+                <p>Portal entertainment untuk pecinta anime, comic, dan novel. Tersedia ribuan judul untuk dinikmati.</p>
+                <div class="footer-social">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Links</h4>
+                <a href="/">Dashboard</a>
+                <a href="/anime/">Anime</a>
+                <a href="/comic/">Comic</a>
+                <a href="/novel/">Novel</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Bantuan</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Kebijakan Privasi</a>
+                <a href="#">Syarat & Ketentuan</a>
+                <a href="#">Kontak</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Download App</h4>
+                <p>Dapatkan aplikasi mobile kami</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-btn">
+                        <i class="fab fa-google-play"></i> Google Play
+                    </a>
+                    <a href="#" class="app-btn">
+                        <i class="fab fa-apple"></i> App Store
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lion!me. All rights reserved.</p>
+        </div>
     </footer>
 
-    <!-- JavaScript Files -->
-    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
     <script src="sw-register.js"></script>
 </body>
 </html>
