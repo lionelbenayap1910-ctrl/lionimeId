@@ -10,14 +10,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Lion!me">
-    <meta name="description" content="Portal entertainment - Anime, Comic, Novel">
+    <meta name="description" content="Portal entertainment - Anime, Donghua, Drama China, Comic, Novel, News">
     
     <!-- Manifest -->
     <link rel="manifest" href="manifest.json">
     
     <!-- Icons -->
-    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
     
     <!-- Font Awesome -->
@@ -35,8 +35,11 @@
             <div class="nav-menu" id="navMenu">
                 <a href="/" class="active">Dashboard</a>
                 <a href="/anime/">Anime</a>
+                <a href="/donghua/">Donghua</a>
+                <a href="/drama-china/">Drama China</a>
                 <a href="/comic/">Comic</a>
                 <a href="/novel/">Novel</a>
+                <a href="/news/">News</a>
             </div>
             
             <div class="nav-right">
@@ -63,11 +66,20 @@
             <a href="/anime/">
                 <i class="fas fa-tv"></i> Anime
             </a>
+            <a href="/donghua/">
+                <i class="fas fa-dragon"></i> Donghua
+            </a>
+            <a href="/drama-china/">
+                <i class="fas fa-film"></i> Drama China
+            </a>
             <a href="/comic/">
                 <i class="fas fa-book"></i> Comic
             </a>
             <a href="/novel/">
                 <i class="fas fa-book-open"></i> Novel
+            </a>
+            <a href="/news/">
+                <i class="fas fa-newspaper"></i> News
             </a>
         </nav>
         
@@ -81,6 +93,7 @@
                 <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
             </div>
         </div>
     </div>
@@ -94,9 +107,9 @@
         <section class="hero">
             <div class="hero-content">
                 <h1>Selamat Datang di <span class="highlight">Lion!me</span></h1>
-                <p>Tempatnya para pecinta anime, comic, dan novel</p>
+                <p>Platform entertainment terlengkap untuk Anime, Donghua, Drama China, Comic, Novel, dan Berita terbaru</p>
                 <div class="hero-buttons">
-                    <button class="btn-primary" onclick="window.location.href='/anime/'">Mulai Nonton Anime</button>
+                    <button class="btn-primary" onclick="window.location.href='/anime/'">Mulai Nonton</button>
                     <button class="btn-secondary" onclick="window.location.href='/#explore'">Jelajahi</button>
                 </div>
             </div>
@@ -109,6 +122,20 @@
                 <div class="stat-info">
                     <h3 class="counter" data-target="1234">0</h3>
                     <p>Judul Anime</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-dragon"></i>
+                <div class="stat-info">
+                    <h3 class="counter" data-target="456">0</h3>
+                    <p>Donghua</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-film"></i>
+                <div class="stat-info">
+                    <h3 class="counter" data-target="789">0</h3>
+                    <p>Drama China</p>
                 </div>
             </div>
             <div class="stat-card">
@@ -128,7 +155,7 @@
             <div class="stat-card">
                 <i class="fas fa-users"></i>
                 <div class="stat-info">
-                    <h3 class="counter" data-target="10000">0</h3>
+                    <h3 class="counter" data-target="15000">0</h3>
                     <p>Pengguna Aktif</p>
                 </div>
             </div>
@@ -138,34 +165,126 @@
         <section class="categories" id="explore">
             <h2 class="section-title">Jelajahi Kategori</h2>
             <div class="category-grid">
+                <!-- Anime Card -->
                 <div class="category-card" onclick="window.location.href='/anime/'">
                     <div class="card-icon">📺</div>
                     <h3>Anime</h3>
                     <p>Streaming anime subtitle Indonesia dengan kualitas terbaik. Tersedia anime ongoing dan completed.</p>
                     <div class="card-footer">
                         <span class="card-link">Lihat Anime →</span>
-                        <span class="card-badge">1000+</span>
+                        <span class="card-badge">1234+</span>
                     </div>
                 </div>
                 
-                <div class="category-card" onclick="window.location.href='/comic/'">
+                <!-- Donghua Card -->
+                <div class="category-card donghua" onclick="window.location.href='/donghua/'">
+                    <div class="card-icon">🐉</div>
+                    <h3>Donghua</h3>
+                    <p>Animasi China terbaik dengan subtitle Indonesia. Dari Battle Through The Heavens hingga Soul Land.</p>
+                    <div class="card-footer">
+                        <span class="card-link">Lihat Donghua →</span>
+                        <span class="card-badge">456+</span>
+                    </div>
+                </div>
+                
+                <!-- Drama China Card -->
+                <div class="category-card drama" onclick="window.location.href='/drama-china/'">
+                    <div class="card-icon">🎬</div>
+                    <h3>Drama China</h3>
+                    <p>Drama China terpopuler dengan subtitle Indonesia. Tersedia berbagai genre: Wuxia, Xianxia, Modern.</p>
+                    <div class="card-footer">
+                        <span class="card-link">Lihat Drama →</span>
+                        <span class="card-badge">789+</span>
+                    </div>
+                </div>
+                
+                <!-- Comic Card -->
+                <div class="category-card comic" onclick="window.location.href='/comic/'">
                     <div class="card-icon">📚</div>
                     <h3>Comic</h3>
                     <p>Baca komik favoritmu dari berbagai genre. Update setiap hari!</p>
                     <div class="card-footer">
                         <span class="card-link">Lihat Comic →</span>
-                        <span class="card-badge">500+</span>
+                        <span class="card-badge">567+</span>
                     </div>
                 </div>
                 
-                <div class="category-card" onclick="window.location.href='/novel/'">
+                <!-- Novel Card -->
+                <div class="category-card novel" onclick="window.location.href='/novel/'">
                     <div class="card-icon">📖</div>
                     <h3>Novel</h3>
                     <p>Novel ringan dan web novel terpopuler. Temukan cerita seru di sini.</p>
                     <div class="card-footer">
                         <span class="card-link">Lihat Novel →</span>
-                        <span class="card-badge">300+</span>
+                        <span class="card-badge">345+</span>
                     </div>
+                </div>
+                
+                <!-- News Card -->
+                <div class="category-card news" onclick="window.location.href='/news/'">
+                    <div class="card-icon">📰</div>
+                    <h3>News</h3>
+                    <p>Berita terbaru seputar anime, donghua, drama China, dan industri entertainment Asia.</p>
+                    <div class="card-footer">
+                        <span class="card-link">Lihat News →</span>
+                        <span class="card-badge">Harian</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular This Week -->
+        <section class="popular">
+            <h2 class="section-title">Populer Minggu Ini</h2>
+            <div class="popular-grid">
+                <div class="popular-item" onclick="window.location.href='/anime/one-piece'">
+                    <span class="rank">1</span>
+                    <img src="https://via.placeholder.com/60x60/ff6b1a/ffffff?text=OP" alt="One Piece">
+                    <div class="popular-info">
+                        <h4>One Piece</h4>
+                        <p>Anime • Episode 1089</p>
+                    </div>
+                    <span class="trend"><i class="fas fa-fire"></i> 12.3k</span>
+                </div>
+                
+                <div class="popular-item" onclick="window.location.href='/donghua/btth'">
+                    <span class="rank">2</span>
+                    <img src="https://via.placeholder.com/60x60/ff6b1a/ffffff?text=BTTH" alt="BTTH">
+                    <div class="popular-info">
+                        <h4>Battle Through The Heavens</h4>
+                        <p>Donghua • Season 5</p>
+                    </div>
+                    <span class="trend"><i class="fas fa-fire"></i> 10.1k</span>
+                </div>
+                
+                <div class="popular-item" onclick="window.location.href='/drama-china/the-untamed'">
+                    <span class="rank">3</span>
+                    <img src="https://via.placeholder.com/60x60/ff6b1a/ffffff?text=TU" alt="The Untamed">
+                    <div class="popular-info">
+                        <h4>The Untamed</h4>
+                        <p>Drama China • 50 Episode</p>
+                    </div>
+                    <span class="trend"><i class="fas fa-fire"></i> 8.7k</span>
+                </div>
+                
+                <div class="popular-item" onclick="window.location.href='/comic/solo-leveling'">
+                    <span class="rank">4</span>
+                    <img src="https://via.placeholder.com/60x60/ff6b1a/ffffff?text=SL" alt="Solo Leveling">
+                    <div class="popular-info">
+                        <h4>Solo Leveling</h4>
+                        <p>Comic • Chapter 178</p>
+                    </div>
+                    <span class="trend"><i class="fas fa-fire"></i> 7.2k</span>
+                </div>
+                
+                <div class="popular-item" onclick="window.location.href='/news/anime-adaptation'">
+                    <span class="rank">5</span>
+                    <img src="https://via.placeholder.com/60x60/ff6b1a/ffffff?text=NEWS" alt="News">
+                    <div class="popular-info">
+                        <h4>10 Anime Adaptasi 2026</h4>
+                        <p>News • 2 jam lalu</p>
+                    </div>
+                    <span class="trend"><i class="fas fa-fire"></i> 5.4k</span>
                 </div>
             </div>
         </section>
@@ -194,6 +313,16 @@
                     <h4>Responsive</h4>
                     <p>Bisa diakses di semua device</p>
                 </div>
+                <div class="feature-item">
+                    <i class="fas fa-globe"></i>
+                    <h4>Lengkap</h4>
+                    <p>Anime, Donghua, Drama, Comic, Novel, News</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-heart"></i>
+                    <h4>Gratis</h4>
+                    <p>Semua konten gratis</p>
+                </div>
             </div>
         </section>
 
@@ -212,12 +341,14 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Lion!me</h3>
-                <p>Portal entertainment untuk pecinta anime, comic, dan novel. Tersedia ribuan judul untuk dinikmati.</p>
+                <p>Portal entertainment untuk pecinta anime, donghua, drama China, comic, novel, dan berita terkini.</p>
                 <div class="footer-social">
                     <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             
@@ -225,8 +356,11 @@
                 <h4>Links</h4>
                 <a href="/">Dashboard</a>
                 <a href="/anime/">Anime</a>
+                <a href="/donghua/">Donghua</a>
+                <a href="/drama-china/">Drama China</a>
                 <a href="/comic/">Comic</a>
                 <a href="/novel/">Novel</a>
+                <a href="/news/">News</a>
             </div>
             
             <div class="footer-section">
@@ -235,6 +369,7 @@
                 <a href="#">Kebijakan Privasi</a>
                 <a href="#">Syarat & Ketentuan</a>
                 <a href="#">Kontak</a>
+                <a href="#">Request Konten</a>
             </div>
             
             <div class="footer-section">
@@ -252,7 +387,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 Lion!me. All rights reserved.</p>
+            <p>&copy; 2026 Lion!me. All rights reserved. | Anime • Donghua • Drama China • Comic • Novel • News</p>
         </div>
     </footer>
 
