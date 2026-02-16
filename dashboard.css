@@ -723,3 +723,135 @@ footer {
         font-size: 28px;
     }
 }
+/* Popular Section */
+.popular {
+    margin: 60px 0;
+}
+
+.popular-grid {
+    background: #1a1a24;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.popular-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #2a2a35;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.popular-item:last-child {
+    border-bottom: none;
+}
+
+.popular-item:hover {
+    background: #2a2a35;
+    border-radius: 10px;
+    transform: translateX(10px);
+}
+
+.rank {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6b1a;
+    min-width: 40px;
+    text-align: center;
+}
+
+.popular-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.popular-info {
+    flex: 1;
+}
+
+.popular-info h4 {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.popular-info p {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.trend {
+    color: #ff6b1a;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.trend i {
+    font-size: 16px;
+}
+
+/* Category Cards with different colors */
+.category-card.anime {
+    border-left: 5px solid #ff6b1a;
+}
+
+.category-card.donghua {
+    border-left: 5px solid #4CAF50;
+}
+
+.category-card.drama {
+    border-left: 5px solid #2196F3;
+}
+
+.category-card.comic {
+    border-left: 5px solid #9C27B0;
+}
+
+.category-card.novel {
+    border-left: 5px solid #FF9800;
+}
+
+.category-card.news {
+    border-left: 5px solid #F44336;
+}
+
+/* Update stats grid untuk 6 item */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+/* Responsive untuk popular section */
+@media (max-width: 768px) {
+    .popular-item {
+        flex-wrap: wrap;
+    }
+    
+    .trend {
+        width: 100%;
+        margin-left: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popular-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .popular-info {
+        width: 100%;
+    }
+    
+    .trend {
+        margin-left: 0;
+        justify-content: center;
+    }
+}
