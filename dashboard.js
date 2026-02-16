@@ -8,7 +8,6 @@ function toggleMenu() {
     mobileMenu.classList.toggle('active');
     overlay.classList.toggle('active');
     
-    // Prevent body scroll when menu open
     if (mobileMenu.classList.contains('active')) {
         document.body.style.overflow = 'hidden';
     } else {
@@ -26,8 +25,7 @@ function animateNumbers() {
     counters.forEach(counter => {
         const target = parseInt(counter.getAttribute('data-target'));
         let current = 0;
-        const increment = target / 50; // Divide by number of steps
-        
+        const increment = target / 50;
         const updateCounter = () => {
             if (current < target) {
                 current += increment;
@@ -37,7 +35,6 @@ function animateNumbers() {
                 counter.innerText = target.toLocaleString();
             }
         };
-        
         updateCounter();
     });
 }
@@ -49,8 +46,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
-            
-            // Close mobile menu if open
             if (document.getElementById('mobileMenu').classList.contains('active')) {
                 toggleMenu();
             }
@@ -58,18 +53,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Load animations when page loads
-window.addEventListener('load', () => {
-    animateNumbers();
-});
-
-// Handle active menu based on current page
+// Set active menu based on current page
 function setActiveMenu() {
     const currentPath = window.location.pathname;
     const menuLinks = document.querySelectorAll('.nav-menu a, .mobile-nav a');
     
     menuLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
+        const href = link.getAttribute('href');
+        if (href === currentPath) {
             link.classList.add('active');
         } else {
             link.classList.remove('active');
@@ -77,4 +68,8 @@ function setActiveMenu() {
     });
 }
 
-setActiveMenu();
+// Load animations when page loads
+window.addEventListener('load', () => {
+    animateNumbers();
+    setActiveMenu();
+});
