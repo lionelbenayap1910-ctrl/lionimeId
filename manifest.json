@@ -1,7 +1,7 @@
 {
   "name": "Lion!me - Portal Entertainment",
   "short_name": "Lion!me",
-  "description": "Portal entertainment untuk Anime, Comic, dan Novel",
+  "description": "Portal entertainment untuk Anime, Donghua, Drama China, Comic, Novel, dan News",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f0f13",
@@ -10,13 +10,13 @@
   "scope": "/",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "icon-512.png",
+      "src": "icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -29,9 +29,30 @@
       "description": "Kembali ke Dashboard",
       "url": "/",
       "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Anime",
+      "short_name": "Anime",
+      "description": "Lihat anime terbaru",
+      "url": "/anime/",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Donghua",
+      "short_name": "Donghua",
+      "description": "Lihat donghua terbaru",
+      "url": "/donghua/",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Drama China",
+      "short_name": "Drama",
+      "description": "Lihat drama china terbaru",
+      "url": "/drama-china/",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
     }
   ],
-  "categories": ["entertainment"],
+  "categories": ["entertainment", "anime", "drama"],
   "lang": "id",
   "dir": "ltr"
 }
