@@ -3,81 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lionime - Nonton Anime Sub Indo</title>
+    <title>Anime - Lion!me</title>
     
-    <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#ff6b1a">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="AnimeKu">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="../icons/icon-192.png">
     
-    <!-- PWA Icons -->
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
-    <link rel="manifest" href="manifest.json">
-    
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- CSS File -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../dashboard.css">
+    <link rel="stylesheet" href="anime.css">
 </head>
 <body>
-    <header>
-        <div class="logo" onclick="navigateTo('home')">Lion<span>!me</span></div>
-        
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari anime..." onkeypress="handleSearchKey(event)">
-            <button onclick="performSearch()"><i class="fas fa-search"></i></button>
+    <div class="category-page">
+        <header class="category-header">
+            <div class="header-container">
+                <i class="fas fa-arrow-left back-btn" onclick="history.back()"></i>
+                <h1><i class="fas fa-tv"></i> Anime</h1>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Cari anime...">
+                    <i class="fas fa-search" onclick="searchAnime()"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="loading" id="loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Memuat data anime...</p>
         </div>
 
-        <!-- Desktop Navigation -->
-        <nav class="desktop-nav">
-            <ul>
-                <li><a onclick="navigateTo('home')" class="nav-link" id="nav-home">Home</a></li>
-                <li><a onclick="navigateTo('ongoing')" class="nav-link" id="nav-ongoing">Ongoing</a></li>
-                <li><a onclick="navigateTo('completed')" class="nav-link" id="nav-completed">Completed</a></li>
-                <li><a onclick="navigateTo('genre')" class="nav-link" id="nav-genre">Genre</a></li>
-                <li><a onclick="navigateTo('schedule')" class="nav-link" id="nav-schedule">Jadwal</a></li>
-                <li><a onclick="navigateTo('all')" class="nav-link" id="nav-all">All Anime</a></li>
-            </ul>
-        </nav>
-
-        <!-- Burger Menu for Mobile -->
-        <div class="burger-menu" onclick="toggleMobileMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="category-content" id="content" style="display: none;">
+            <div class="category-grid" id="animeGrid"></div>
         </div>
-    </header>
+    </div>
 
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav">
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
-                <li><a onclick="navigateTo('home'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-home">Home</a></li>
-                <li><a onclick="navigateTo('ongoing'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-ongoing">Ongoing</a></li>
-                <li><a onclick="navigateTo('completed'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-completed">Completed</a></li>
-                <li><a onclick="navigateTo('genre'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-genre">Genre</a></li>
-                <li><a onclick="navigateTo('schedule'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-schedule">Jadwal</a></li>
-                <li><a onclick="navigateTo('all'); closeMobileMenu()" class="nav-link-mobile" id="nav-mobile-all">All Anime</a></li>
-            </ul>
-        </div>
-        <div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
-    </nav>
-
-    <main id="main-content">
-        <!-- Konten akan diisi oleh JavaScript -->
-        <div class="loading">
-            <i class="fas fa-spinner fa-spin fa-3x"></i>
-            <p style="margin-top: 20px;">Memuat data...</p>
-        </div>
-    </main>
-
-    <footer>
-        <p>Lionime - Nonton Anime Sub Indo.</p>
-        <p style="margin-top: 10px; font-size: 13px;">Masih Beta</p>
-    </footer>
-
-    <!-- JavaScript Files -->
-    <script src="script.js"></script>
+    <script src="anime.js"></script>
+    <script src="../sw-register.js"></script>
 </body>
 </html>
