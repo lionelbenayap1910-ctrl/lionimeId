@@ -26,6 +26,7 @@ function animateNumbers() {
         const target = parseInt(counter.getAttribute('data-target'));
         let current = 0;
         const increment = target / 50;
+        
         const updateCounter = () => {
             if (current < target) {
                 current += increment;
@@ -35,23 +36,10 @@ function animateNumbers() {
                 counter.innerText = target.toLocaleString();
             }
         };
+        
         updateCounter();
     });
 }
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-            if (document.getElementById('mobileMenu').classList.contains('active')) {
-                toggleMenu();
-            }
-        }
-    });
-});
 
 // Set active menu based on current page
 function setActiveMenu() {
