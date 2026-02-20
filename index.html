@@ -14,20 +14,17 @@
     
     <!-- Manifest -->
     <link rel="manifest" href="manifest.json">
-    
-    <!-- Icons -->
     <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Dashboard CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar Desktop -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo" onclick="window.location.href='/'">Lion<span>!me</span></div>
@@ -60,27 +57,13 @@
         </div>
         
         <nav class="mobile-nav">
-            <a href="/" class="active">
-                <i class="fas fa-home"></i> Dashboard
-            </a>
-            <a href="/anime/">
-                <i class="fas fa-tv"></i> Anime
-            </a>
-            <a href="/donghua/">
-                <i class="fas fa-dragon"></i> Donghua
-            </a>
-            <a href="/drama-china/">
-                <i class="fas fa-film"></i> Drama China
-            </a>
-            <a href="/comic/">
-                <i class="fas fa-book"></i> Comic
-            </a>
-            <a href="/novel/">
-                <i class="fas fa-book-open"></i> Novel
-            </a>
-            <a href="/news/">
-                <i class="fas fa-newspaper"></i> News
-            </a>
+            <a href="/" class="active"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="/anime/"><i class="fas fa-tv"></i> Anime</a>
+            <a href="/donghua/"><i class="fas fa-dragon"></i> Donghua</a>
+            <a href="/drama-china/"><i class="fas fa-film"></i> Drama China</a>
+            <a href="/comic/"><i class="fas fa-book"></i> Comic</a>
+            <a href="/novel/"><i class="fas fa-book-open"></i> Novel</a>
+            <a href="/news/"><i class="fas fa-newspaper"></i> News</a>
         </nav>
         
         <!-- SOSIAL MEDIA DI MOBILE MENU -->
@@ -108,10 +91,6 @@
             <div class="hero-content">
                 <h1>Selamat Datang di <span class="highlight">Lion!me</span></h1>
                 <p>Platform entertainment terlengkap untuk Anime, Donghua, Drama China, Comic, Novel, dan Berita terbaru</p>
-                <div class="hero-buttons">
-                    <button class="btn-primary" onclick="window.location.href='/anime/'">Mulai Nonton</button>
-                    <button class="btn-secondary" onclick="window.location.href='/#explore'">Jelajahi</button>
-                </div>
             </div>
         </section>
 
@@ -153,10 +132,10 @@
                 </div>
             </div>
             <div class="stat-card">
-                <i class="fas fa-users"></i>
+                <i class="fas fa-newspaper"></i>
                 <div class="stat-info">
                     <h3 class="counter" data-target="15000">0</h3>
-                    <p>Pengguna Aktif</p>
+                    <p>Berita</p>
                 </div>
             </div>
         </section>
@@ -169,66 +148,48 @@
                 <div class="category-card" onclick="window.location.href='/anime/'">
                     <div class="card-icon">📺</div>
                     <h3>Anime</h3>
-                    <p>Streaming anime subtitle Indonesia dengan kualitas terbaik. Tersedia anime ongoing dan completed.</p>
-                    <div class="card-footer">
-                        <span class="card-link">Lihat Anime →</span>
-                        <span class="card-badge anime-badge">1234+</span>
-                    </div>
+                    <p>Streaming anime subtitle Indonesia. Tersedia anime ongoing dan completed.</p>
+                    <span class="card-link">Lihat Anime →</span>
                 </div>
                 
                 <!-- Donghua Card -->
                 <div class="category-card" onclick="window.location.href='/donghua/'">
                     <div class="card-icon">🐉</div>
                     <h3>Donghua</h3>
-                    <p>Animasi China terbaik dengan subtitle Indonesia. Dari Battle Through The Heavens hingga Soul Land.</p>
-                    <div class="card-footer">
-                        <span class="card-link">Lihat Donghua →</span>
-                        <span class="card-badge donghua-badge">456+</span>
-                    </div>
+                    <p>Animasi China terbaik dengan subtitle Indonesia.</p>
+                    <span class="card-link">Lihat Donghua →</span>
                 </div>
                 
                 <!-- Drama China Card -->
                 <div class="category-card" onclick="window.location.href='/drama-china/'">
                     <div class="card-icon">🎬</div>
                     <h3>Drama China</h3>
-                    <p>Drama China terpopuler dengan subtitle Indonesia. Tersedia berbagai genre: Wuxia, Xianxia, Modern.</p>
-                    <div class="card-footer">
-                        <span class="card-link">Lihat Drama →</span>
-                        <span class="card-badge drama-badge">789+</span>
-                    </div>
+                    <p>Drama China terpopuler dengan subtitle Indonesia.</p>
+                    <span class="card-link">Lihat Drama →</span>
                 </div>
                 
                 <!-- Comic Card -->
                 <div class="category-card" onclick="window.location.href='/comic/'">
                     <div class="card-icon">📚</div>
                     <h3>Comic</h3>
-                    <p>Baca komik favoritmu dari berbagai genre. Update setiap hari!</p>
-                    <div class="card-footer">
-                        <span class="card-link">Lihat Comic →</span>
-                        <span class="card-badge comic-badge">567+</span>
-                    </div>
+                    <p>Baca komik favoritmu dari berbagai genre.</p>
+                    <span class="card-link">Lihat Comic →</span>
                 </div>
                 
                 <!-- Novel Card -->
                 <div class="category-card" onclick="window.location.href='/novel/'">
                     <div class="card-icon">📖</div>
                     <h3>Novel</h3>
-                    <p>Novel ringan dan web novel terpopuler. Temukan cerita seru di sini.</p>
-                    <div class="card-footer">
-                        <span class="card-link">Lihat Novel →</span>
-                        <span class="card-badge novel-badge">345+</span>
-                    </div>
+                    <p>Novel ringan dan web novel terpopuler.</p>
+                    <span class="card-link">Lihat Novel →</span>
                 </div>
                 
                 <!-- News Card -->
                 <div class="category-card" onclick="window.location.href='/news/'">
                     <div class="card-icon">📰</div>
                     <h3>News</h3>
-                    <p>Berita terbaru seputar anime, donghua, drama China, dan industri entertainment Asia.</p>
-                    <div class="card-footer">
-                        <span class="card-link">Lihat News →</span>
-                        <span class="card-badge news-badge">Harian</span>
-                    </div>
+                    <p>Berita terbaru seputar anime, donghua, dan drama China.</p>
+                    <span class="card-link">Lihat News →</span>
                 </div>
             </div>
         </section>
@@ -269,15 +230,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- CTA Section -->
-        <section class="cta">
-            <div class="cta-content">
-                <h2>Siap untuk mulai?</h2>
-                <p>Bergabunglah dengan ribuan pengguna lainnya</p>
-                <button class="btn-primary" onclick="window.location.href='/anime/'">Mulai Nonton Sekarang</button>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -287,12 +239,10 @@
                 <h3>Lion!me</h3>
                 <p>Portal entertainment untuk pecinta anime, donghua, drama China, comic, novel, dan berita terkini.</p>
                 <div class="footer-social">
-                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
             
@@ -306,32 +256,10 @@
                 <a href="/novel/">Novel</a>
                 <a href="/news/">News</a>
             </div>
-            
-            <div class="footer-section">
-                <h4>Bantuan</h4>
-                <a href="#">FAQ</a>
-                <a href="#">Kebijakan Privasi</a>
-                <a href="#">Syarat & Ketentuan</a>
-                <a href="#">Kontak</a>
-                <a href="#">Request Konten</a>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Download App</h4>
-                <p>Dapatkan aplikasi mobile kami</p>
-                <div class="app-buttons">
-                    <a href="#" class="app-btn">
-                        <i class="fab fa-google-play"></i> Google Play
-                    </a>
-                    <a href="#" class="app-btn">
-                        <i class="fab fa-apple"></i> App Store
-                    </a>
-                </div>
-            </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 Lion!me. All rights reserved. | Anime • Donghua • Drama China • Comic • Novel • News</p>
+            <p>&copy; 2026 Lion!me. All rights reserved.</p>
         </div>
     </footer>
 
