@@ -43,16 +43,8 @@
       "description": "Lihat donghua terbaru",
       "url": "/donghua/",
       "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "Drama China",
-      "short_name": "Drama",
-      "description": "Lihat drama china terbaru",
-      "url": "/drama-china/",
-      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
     }
   ],
-  "categories": ["entertainment", "anime", "drama"],
-  "lang": "id",
-  "dir": "ltr"
+  "categories": ["entertainment"],
+  "lang": "id"
 }
